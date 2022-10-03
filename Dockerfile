@@ -1,5 +1,5 @@
 FROM elasticsearch:7.0.0
-LABEL Netology_test
+LABEL description="Netology_test"
 ENV PATH=/usr/lib:$PATH
 
 ADD elasticsearch.yml /usr/share/elasticsearch/config
