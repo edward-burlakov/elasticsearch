@@ -1,1 +1,14 @@
+FROM FROM elasticsearch:7.0.0
+LABEL Netology_test
+ENV PATH=/usr/lib:$PATH
 
+ADD elasticsearch.yml /etc/elasticsearch/
+
+RUN mkdir /usr/share/elasticsearch/snapshots &&\
+    chown elasticsearch:elasticsearch /usr/share/elasticsearch/snapshots
+RUN mkdir /var/lib/logs \
+    && chown elasticsearch:elasticsearch /var/lib/logs \
+    && mkdir /var/lib/data \
+    && chown elasticsearch:elasticsearch /var/lib/data
+    
+USER elasticsearch
