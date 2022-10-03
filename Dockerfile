@@ -1,4 +1,4 @@
-FROM FROM elasticsearch:7.0.0
+FROM elasticsearch:7.0.0
 LABEL Netology_test
 ENV PATH=/usr/lib:$PATH
 
