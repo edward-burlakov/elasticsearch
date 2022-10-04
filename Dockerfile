@@ -4,7 +4,7 @@ ENV PATH=/usr/lib:$PATH
 
 COPY ./elasticsearch.yml ./usr/share/elasticsearch/config
 
-RUN sudo useradd -G elasticsearch -s /bin/bash elasticsearch
+RUN useradd -G elasticsearch -s /bin/bash elasticsearch
 
 RUN mkdir /usr/share/elasticsearch/snapshots &&\
     chown elasticsearch:elasticsearch /usr/share/elasticsearch/snapshots
