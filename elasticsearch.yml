@@ -22,10 +22,14 @@ discovery.type: single-node
 # Path to directory where to store the data (separate multiple locations by comma):
 #
 path.data: /var/lib/data
+
 #
 # Path to log files:
 #
 path.logs: /var/lib/logs
+
+# Path to backup directory
+path.repo: ["/usr/share/elasticsearch/snapshots"]
 
 # ----------------------------------- Memory -----------------------------------
 #
